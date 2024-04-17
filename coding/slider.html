@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 레이아웃 B-1</title>
+    <link rel="stylesheet" href="https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #haeader {
+            width: 100%;
+            background-color: #efefef;
+            position: relative;
+            z-index: 1000;
+        }
+
+        #haeader::after {
+            content: '';
+            width: 100%;
+            height: 0;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            transition: all 0.3s;
+        }
+
+        #haeader.on::after {
+            height: 155px;
+        }
+
+        #haeader .header_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #haeader .header_container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #d9d9d9;
+        }
+
+        #haeader .header_container .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #d1d1d1;
+        }
+
+        #slider {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #c7c7c7;
+        }
+
+        #contents {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #bcbcbc;
+        }
+
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #b1b1b1;
+        }
+
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #a3a3a3;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: #d1d1d1;
+        }
+
+        #footer .footer__container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #footer .footer__container .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #9d9d9d;
+        }
+
+        #footer .footer__container .footer2 {
+            width: 80%;
+        }
+
+        #footer .footer__container .footer2 .footer2-1 {
+            width: 100%;
+            height: 50px;
+            background-color: #929292;
+        }
+
+        #footer .footer__container .footer2 .footer2-2 {
+            width: 100%;
+            height: 50px;
+            background-color: #838383;
+        }
+
+        /* sliderWrap */
+        .sliderWrap {
+            position: relative;
+        }
+
+        .sliderWrap .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* .sliderWrap .slider:nth-child(1) {
+            display: block;
+        } */
+
+        .sliderWrap .slider span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        /* nav */
+        .nav {
+            position: relative;
+            z-index: 2000;
+        }
+
+        .nav>ul {
+            display: flex;
+            justify-content: right;
+            margin-top: 60px;
+        }
+
+        .nav>ul>li {
+            list-style: none;
+        }
+
+        .nav>ul>li>a {
+            text-decoration: none;
+            color: #000;
+            padding: 10px 50px;
+            background-color: #bcbcbc;
+            display: inline-block;
+        }
+
+        .nav>ul>li>a:hover {
+            background-color: #a9a9a9;
+        }
+
+        .nav>ul>li>ul {
+            display: none;
+        }
+
+        .nav>ul>li>ul>li {
+            list-style: none;
+            text-align: center;
+        }
+
+        .nav>ul>li>ul>li>a {
+            text-decoration: none;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .nav>ul>li>ul>li>a:hover {
+            background-color: #a3a3a3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="haeader">
+            <div class="header_container">
+                <h1 class="logo"></h1>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">1차 메뉴</a>
+                            <ul>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">1차 메뉴</a>
+                            <ul>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">1차 메뉴</a>
+                            <ul>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">1차 메뉴</a>
+                            <ul>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                                <li><a href="#">2차 메뉴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //haeader -->
+
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="slider s1">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg" alt="이미지1">
+                    <span>이미지1</span>
+                </div>
+                <div class="slider s2">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg" alt="이미지2">
+                    <span>이미지2</span>
+                </div>
+                <div class="slider s3">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg" alt="이미지3">
+                    <span>이미지3</span>
+                </div>
+            </div>
+        </article>
+        <!-- //slider -->
+
+        <main id="contents">
+            <section class="content1"></section>
+            <section class="content2"></section>
+            <section class="content3"></section>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="footer__container">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            let currentIndex = 0;  // 현재 이미지
+
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % 3; // 1 2 0 1 2 0 1 ...
+
+                $(".slider").eq(currentIndex).fadeOut(1000);    // 첫번째 이미지 사라짐
+                $(".slider").eq(nextIndex).fadeIn(1000);        // 두번째 이미지 나타남
+
+                currentIndex = nextIndex;
+            }, 3000);
+        });
+
+        $(function () {
+            $(".nav>ul>li").mouseover(function () {
+                $(".nav>ul>li>ul").stop().fadeIn(900);
+                $("#haeader").addClass("on");
+            });
+            $(".nav>ul>li").mouseout(function () {
+                $(".nav>ul>li>ul").stop().fadeOut(100);
+                $("#haeader").removeClass("on");
+            });
+        })
+    </script>
+    <script>
+        window.onload = function () {
+            let currentIndex = 0;   // 현재 이미지
+            const slider = document.querySelectorAll(".slider");    // 모든 이미지 변수 저장
+            slider.forEach(img => img.style.opacity = "0");     // 모든 이미지를 투명하게
+            slider[0].style.opacity = "1";                      // 첫번째 이미지만 보이게
+
+            setInterval(() => {     // 3초에 한번씩 실행
+                let nextIndex = (currentIndex + 1) % slider.length; // 1 2 0 1 2 0....
+
+                slider[currentIndex].style.opacity = "0";      // 첫번째 이미지 사라짐
+                slider[nextIndex].style.opacity = "1";      // 두번째 이미지 나타남
+                slider.forEach(img => img.style.transition = "all 1s"); // 이미지에 애니메이션 추가
+
+                currentIndex = nextIndex;
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

@@ -6,6 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹디자인기능사 레이아웃 C-1</title>
+    <link rel="stylesheet" href="https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css">
+    <style>
+        * {
+            font-family: "nanumSquareNeo";
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .logo,
+        .footer1,
+        .footer2,
+        .footer3 {
+            line-height: 100px;
+        }
+
+        .nav {
+            line-height: 550px;
+        }
+
+        .footer2-1,
+        .footer2-2 {
+            line-height: 50px;
+        }
+
+        #slider {
+            line-height: 300px;
+        }
+
+        .content1,
+        .content2,
+        .content3 {
+            line-height: 200px;
+        }
+
+        .container {
+            justify-content: center;
+        }
+    </style>
     <style>
         * {
             margin: 0;
@@ -100,28 +142,28 @@
 <body>
     <div id="wrap">
         <aside id="aside">
-            <h1 class="logo"></h1>
-            <nav class="nav"></nav>
+            <h1 class="logo">로고</h1>
+            <nav class="nav">메뉴</nav>
         </aside>
         <!-- //aside -->
 
         <main id="main">
-            <article id="slider">
+            <article id="slider">이미지 슬라이드
             </article>
             <!-- //slider -->
 
             <section id="contents">
-                <article class="content1"></article>
-                <article class="content2"></article>
-                <article class="content3"></article>
+                <article class="content1">공지사항/갤러리</article>
+                <article class="content2">배너</article>
+                <article class="content3">바로가기</article>
             </section>
             <!-- //contents -->
 
             <footer id="footer">
-                <div class="footer1"></div>
+                <div class="footer1">로고</div>
                 <div class="footer2">
-                    <div class="footer2-1"></div>
-                    <div class="footer2-2"></div>
+                    <div class="footer2-1">하단 메뉴</div>
+                    <div class="footer2-2">COPYRIGHT</div>
                 </div>
             </footer>
             <!-- //footer -->
